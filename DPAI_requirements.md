@@ -113,9 +113,42 @@ Ensure that test cases and documentation are kept up to date as the project evol
 
 ```mermaid
 flowchart TD
-    A[Christmas] -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
+
+  user((User))
+  particle_field[[class :Particle Field]]
+  particle[[class :Particle]]
+  gravity[[class :Gravitational Interaction]]
+  boundary[[class :Boundary Condition]]
+
+  advance_sim(Advance Simulation)
+  collision_detection(Collision Detection)
+  configure_sim(Configure Simulation)
+  exit_sim(Exit Simulation)
+  start_sim(Start Simulation)
+  stop_sim(Stop Simulation)
+  pause_sim(Pause Simulation)
+  render_frame(Render Frame)
+  step_sim(Step Simulation)
+  view_sim(View Simulation)
+
+  user           -->|Includes| start_sim
+  user           -->|Includes| stop_sim
+  user           -->|Includes| pause_sim
+  user           -->|Includes| configure_sim
+  user           -->|Includes| view_sim
+  start_sim      -->|R1| particle_field
+  configure_sim  -->|R2| particle
+  configure_sim  -->|R3 (Gravitational)| gravity
+  configure_sim  -->|R4| boundary
+  configure_sim  -->|Includes| step_sim
+  pause_sim      -->|Includes| resume_sim
+  step_sim       -->|Includes| advance_sim
+  advance_sim    -->|R3 (Gravitational)| particle
+  advance_sim    -->|Includes| collision_detection
+  stop_sim       -->|Includes| exit_sim
+  view_sim       -->|Includes| render_frame
+  render_frame   -->|R6| particle_field
+  particle_field -->|R3 (Gravitational)| particle
+  particle_field -->|R4| boundary
 ```
+
