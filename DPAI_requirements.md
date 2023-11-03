@@ -128,6 +128,7 @@ flowchart TD
   stop_sim(Stop Simulation)
   pause_sim(Pause Simulation)
   render_frame(Render Frame)
+  resume_sim(Resume Simulation)
   step_sim(Step Simulation)
   view_sim(View Simulation)
 
