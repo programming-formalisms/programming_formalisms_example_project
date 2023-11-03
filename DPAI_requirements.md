@@ -80,7 +80,7 @@ Ensure that test cases and documentation are kept up to date as the project evol
 
 ![](usecase_model.png)
 
-```
+```plantuml
 @startuml UserSimulation
 
 !define PARTICLE_FIELD class :Particle Field;
@@ -109,4 +109,13 @@ Ensure that test cases and documentation are kept up to date as the project evol
 (PARTICLE_FIELD) -down-> BOUNDARY : R4
 
 @enduml
+```
+
+```mermaid
+flowchart TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
 ```
