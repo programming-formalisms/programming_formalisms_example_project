@@ -138,17 +138,16 @@ flowchart TD
   user           -->|Includes| view_sim
   start_sim      -->|R1| particle_field
   configure_sim  -->|R2| particle
-  configure_sim  -->|R3 (Gravitational)| gravity
+  configure_sim  -->|R3, Gravitational| gravity
   configure_sim  -->|R4| boundary
   configure_sim  -->|Includes| step_sim
   pause_sim      -->|Includes| resume_sim
   step_sim       -->|Includes| advance_sim
-  advance_sim    -->|R3 (Gravitational)| particle
+  advance_sim    -->|R3, Gravitational| particle
   advance_sim    -->|Includes| collision_detection
   stop_sim       -->|Includes| exit_sim
   view_sim       -->|Includes| render_frame
   render_frame   -->|R6| particle_field
-  particle_field -->|R3 (Gravitational)| particle
+  particle_field -->|R3, Gravitational| particle
   particle_field -->|R4| boundary
 ```
-
