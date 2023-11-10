@@ -20,8 +20,8 @@ Number|Document                                                              |De
 ## Abbreviations
 
 Abbreviation|Full
-------------|------------------------------------
-DPAI        |Design Process Artifical Inteligence 
+------------|--------------------------------------
+DPAI        |Design Process Artificial Intelligence 
 DPD         |Design Process Document
 DPUA        |Design Process Un Assisted
 
