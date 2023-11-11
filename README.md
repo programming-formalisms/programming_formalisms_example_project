@@ -15,7 +15,7 @@ Number|Document                                                              |De
 3a    |[DPD unassisted](DPD_unassisted.md)                                   |The exercise to create the formal design
 3b    |[DPUA requirements specification](DPUA_requirementspecification.md)   |The requirements specification, the result of `3a`
 4a    |[DPD assisted](DPD_assisted.md)                                       |The exercise to create DPAI. It is part of the course
-4b    |[DPAI requirements](DPAI_requirements.md)                             |The result of `4a`. This is tailored to the example project
+4b    |**[DPAI requirements](DPAI_requirements.md)**                         |The requirements specification, the result of `4a`
 
 ## Abbreviations
 
