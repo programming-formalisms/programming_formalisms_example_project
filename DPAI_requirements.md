@@ -78,15 +78,13 @@ Ensure that test cases and documentation are kept up to date as the project evol
 
 ## USECASE MODEL
 
-![](usecase_model.png)
-
 ```plantuml
 @startuml UserSimulation
 
-!define PARTICLE_FIELD class :Particle Field;
+!define PARTICLE_FIELD class :ParticleField;
 !define PARTICLE class :Particle;
-!define GRAVITY class :Gravitational Interaction;
-!define BOUNDARY class :Boundary Condition;
+!define GRAVITY class :GravitationalInteraction;
+!define BOUNDARY class :BoundaryCondition;
 
 :User: -down-> (Start Simulation) : Includes
 :User: -down-> (Stop Simulation) : Includes
