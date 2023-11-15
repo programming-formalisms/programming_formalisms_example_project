@@ -17,6 +17,9 @@ Number|Document                                                              |De
 4a    |[DPD assisted](DPD_assisted.md)                                       |The exercise to create DPAI. It is part of the course
 4b    |**[DPAI requirements](DPAI_requirements.md)**                         |The requirements specification, the result of `4a`
 
+We use both console application (written by humans) and a GUI application 
+(written by AI). The GUI package is PyGame.
+
 ## Abbreviations
 
 Abbreviation|Full
