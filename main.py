@@ -17,7 +17,7 @@ from pf_example.testing import (
 """
 
 if __name__ == "__main__":
-    print("Cannor measure speed yet") # noqa print is used as a stub
+    print("Cannor measure speed yet") # noqa: T201 print is used as a stub
 """
 TODO
     speed_measurements = get_speed_measurements(
