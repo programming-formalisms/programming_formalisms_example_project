@@ -23,7 +23,7 @@ Abbreviation|Full
 ------------|--------------------------------------
 DPAI        |Design Process Artificial Intelligence 
 DPD         |Design Process Document
-DPUA        |Design Process Un Assisted
+DPUA        |Design Process UnAssisted
 
 ## git branching model
 
