@@ -93,20 +93,20 @@ Ensure that test cases and documentation are kept up to date as the project evol
 :User: -down-> (Pause Simulation) : Includes
 :User: -down-> (Configure Simulation) : Includes
 :User: -down-> (View Simulation) : Includes
-(Start Simulation) -down-> PARTICLE_FIELD : R1
-(Configure Simulation) -down-> PARTICLE : R2
-(Configure Simulation) -down-> GRAVITY : R3 (Gravitational)
-(Configure Simulation) -down-> BOUNDARY : R4
+(Start Simulation) -down-> [PARTICLE_FIELD] : R1
+(Configure Simulation) -down-> [PARTICLE] : R2
+(Configure Simulation) -down-> [GRAVITY] : R3 (Gravitational)
+(Configure Simulation) -down-> [BOUNDARY] : R4
 (Configure Simulation) -down-> (Step Simulation) : Includes
 (Pause Simulation) -down-> (Resume Simulation) : Includes
 (Step Simulation) -down-> (Advance Simulation) : Includes
-(Advance Simulation) -down-> PARTICLE : R3 (Gravitational)
+(Advance Simulation) -down-> [PARTICLE] : R3 (Gravitational)
 (Advance Simulation) -down-> (Collision Detection) : Includes
 (Stop Simulation) -down-> (Exit Simulation) : Includes
 (View Simulation) -down-> (Render Frame) : Includes
-(Render Frame) -down-> PARTICLE_FIELD : R6
-(PARTICLE_FIELD) -down-> PARTICLE : R3 (Gravitational)
-(PARTICLE_FIELD) -down-> BOUNDARY : R4
+(Render Frame) -down-> [PARTICLE_FIELD] : R6
+(PARTICLE_FIELD) -down-> [PARTICLE] : R3 (Gravitational)
+(PARTICLE_FIELD) -down-> [BOUNDARY] : R4
 
 @enduml
 ```
