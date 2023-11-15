@@ -60,3 +60,12 @@ Videos:
 
  * [From design to feature](https://youtu.be/f-rzfZtsPKU)
  * [Splitting up an Issues to smaller Issues](https://youtu.be/mhIBXfxVxIU)
+
+## Usecase model
+
+![](usecase_model.png)
+
+## Class diagram
+
+![](class_diagram.png)
+
