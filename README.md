@@ -24,6 +24,7 @@ We use both console application (written by humans) and a GUI application
 
 Abbreviation|Full
 ------------|--------------------------------------
+CDAI        |Class Design assisted by Artificial Intelligence 
 DPAI        |Design Process Artificial Intelligence 
 DPD         |Design Process Document
 DPUA        |Design Process UnAssisted
