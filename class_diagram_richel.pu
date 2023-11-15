@@ -1,0 +1,39 @@
+
+class Simulation
+
+abstract class SimulationView
+class SimulationTerminal
+class SimulationWindow
+
+abstract class SimulationController
+class SimulationTerminalInput
+class SimulationWindowInput
+
+class SimulationParameters
+class Particles
+class Particle
+
+class Simulation {
+
+}
+
+class Particles {
+
+}
+
+class Particle {
+
+}
+
+SimulationView --* Simulation
+SimulationView --* SimulationController
+
+Simulation --* Particles
+Particles --* Particle
+
+
+SimulationView <|-- SimulationTerminal
+SimulationView <|-- SimulationWindow
+
+SimulationController <|-- SimulationTerminalInput
+SimulationController <|-- SimulationWindowInput
