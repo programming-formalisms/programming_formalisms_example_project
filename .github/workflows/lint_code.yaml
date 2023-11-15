@@ -5,32 +5,13 @@ name: Lint code
 on:
   push:
   pull_request:
+  # Check monthly, on the 16th day (the first letter of this repo, is the 16th letter in the alphabet 
   schedule:
-  - cron: "0 0 1 * *"
-
+  - cron: "0 0 16 * *"
 
 jobs:
   lint_code:
-
     runs-on: ubuntu-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-
     steps:
       - uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Lint with Ruff
-        run: |
-          pip install ruff
-          ruff --format=github --target-version=py37 .
-        continue-on-error: false
+      - uses: chartboost/ruff-action@v1
