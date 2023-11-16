@@ -13,7 +13,8 @@ classes.
 !theme spacelab
 
 package simulation{
-class SimulationControler {
+
+class SimulationController {
   +runSimulation(components: List<SimulationComponent>) : void
   +main():void
 }
@@ -57,7 +58,7 @@ class Particle {
   -mass:number
   -position:Coorddinate
 }
-Class Coorddinate{
+Class Coordinate{
  ~x:number
  ~y:number
 }
@@ -71,7 +72,7 @@ class SettingsView {
 
 class SimulationView{
  +DisplaySimulation(component:: List<SimulationComponent>):void
- +StartSimulation(ProductionModule:runSimulation()):void
+ +StartSimulation(SimulationController:runSimulation()):void
  +UpdateSimulation():void
 }
 }
@@ -81,15 +82,15 @@ SimulationComponent <|-- ParticleField
 SimulationComponent <|-- GravitationalInteraction
 SimulationComponent <|-- BoundaryCondition
 SimulationComponent <|-- Particle
-Particle --* Coorddinate
+Particle --* Coordinate
 
 
-SimulationControler ..> SettingsModule : Uses
-SimulationControler ..> SimulationComponent : Uses
+SimulationController ..> SettingsModule : Uses
+SimulationController ..> SimulationComponent : Uses
 
-SettingsView ..> SimulationControler: Uses
+SettingsView ..> SimulationController: Uses
 SettingsModule ..> SimulationFactory : configureComponents()
-SimulationView ..>SimulationControler:Uses
+SimulationView ..>SimulationController:Uses
 SimulationView-->SettingsView: Associate
 
 @enduml
