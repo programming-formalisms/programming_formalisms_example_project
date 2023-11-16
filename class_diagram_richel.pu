@@ -1,3 +1,4 @@
+@startuml
 
 class Simulation
 
@@ -12,24 +13,21 @@ class SimulationWindowInput
 class SimulationParameters
 class Particles
 class Particle
-
-class Simulation {
-
-}
-
-class Particles {
-
-}
-
-class Particle {
-
-}
+class Speed
+class Position
 
 SimulationView --* Simulation
 SimulationView --* SimulationController
 
+Simulation --* SimulationParameters
+SimulationParameters --* InteractionParameters
+SimulationParameters --* BoundaryConditions
+
 Simulation --* Particles
-Particles --* Particle
+Particles --* "SimulationParameters::m_n_particles" Particle
+
+Particle --* Speed
+Particle --* Position
 
 
 SimulationView <|-- SimulationTerminal
@@ -37,3 +35,104 @@ SimulationView <|-- SimulationWindow
 
 SimulationController <|-- SimulationTerminalInput
 SimulationController <|-- SimulationWindowInput
+
+class SimulationParameters {
+  + SimulationParameters(parameter_filename)
+  - m_timestep
+  - m_n_particles
+  - m_interaction_parameters
+  - m_boundary_conditions
+}
+
+class Simulation {
+  + go_to_next_state()
+  - m_simulation_parameters
+}
+
+note left of Simulation::go_to_next_state
+  uses SimulationParameters::m_timestep
+end note
+
+
+class Particles {
+  + move() ' as if each particle is alone
+  + interact(interaction_parameters)
+  + respond_to_boundary_conditions(boundary_conditions)
+}
+
+note left of Particles::move
+  as if each particle is alone
+end note
+
+class Particle {
+  + move()
+  + respond_to_boundary_conditions(boundary_conditions)
+
+  - m_position
+  - m_speed
+}
+
+note left of Particle::move
+  as if alone
+end note
+
+
+abstract class SimulationView {
+  + {abstract} show()
+}
+
+class SimulationTerminal {
+  SimulationTerminal(terminal_size)
+  + show()
+}
+note left of SimulationTerminal::show
+  show as ASCII art
+end note
+
+class SimulationWindow {
+  + show()
+  SimulationWindow(window_size)
+}
+
+note left of SimulationWindow::show
+  show as pixels
+end note
+
+
+abstract class SimulationController {
+  + SimulationController(parameter_filename)
+  + exit()
+  - m_simulation
+}
+
+class SimulationTerminalInput {
+  + show_n_steps()
+  + exit()
+}
+
+note left of SimulationTerminalInput::show_n_steps
+  shows n steps, then pauses
+end note
+
+
+class SimulationWindowInput {
+  + stop()
+  + start()
+  + exit()
+}
+
+note left of SimulationWindowInput::start
+  on key press or mouse click
+end note
+
+note left of SimulationWindowInput::stop
+  on key press or mouse click
+end note
+
+note left of SimulationWindowInput::exit
+  on ESC press
+end note
+
+
+
+@enduml
