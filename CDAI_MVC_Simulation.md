@@ -56,7 +56,7 @@ class SettingsModule {
 }
 class Particle {
   -mass:number
-  -position:Coorddinate
+  -position:Coordinate
 }
 Class Coordinate{
  ~x:number
