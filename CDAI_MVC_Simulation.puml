@@ -1,34 +1,37 @@
-
-```plantuml 
 @startuml SimulationFactory
 !theme spacelab
 
-!define PARTICLE class :Particle;
-!define GRAVITY class :GravitationalInteraction;
-!define BOUNDARY class :BoundaryCondition;
+package simulation{
+class SimulationControler {
+  +runSimulation(components: List<SimulationComponent>) : void
+  +main():void
+}
 
-interface SimulationComponent {
+package simulation.model #CCDDDD{
+
+Abstract SimulationComponent {
   +configure() : void
   +initialize() : void
-  +run() : void
+  +update():SimulationComponent
+  
 }
 
 class ParticleField {
   +configure() : void
   +initialize() : void
-  +run() : void
+  +update() : ParticleField
 }
 
 class GravitationalInteraction {
   +configure() : void
   +initialize() : void
-  +run() : void
+  +update() : GravitationalInteraction
 }
 
 class BoundaryCondition {
   +configure() : void
   +initialize() : void
-  +run() : void
+  +update() : BoundaryCondition
 }
 
 class SimulationFactory {
@@ -39,31 +42,43 @@ class SettingsModule {
   +configureComponents(factory: SimulationFactory) : void
   +initializeComponents() : void
 }
+class Particle {
+  -mass:number
+  -position:Coorddinate
+}
+Class Coorddinate{
+ ~x:number
+ ~y:number
+}
+}
 
+package simulation.views #FFFFDD {
 class SettingsView {
   +DisplaySettings(controler: SettingsModule) : void
   +UpdateSettings() : void
 }
 
-
-class ProductionModule {
-  +runSimulation(components: List<SimulationComponent>) : void
-}
 class SimulationView{
  +DisplaySimulation(component:: List<SimulationComponent>):void
  +StartSimulation(ProductionModule:runSimulation()):void
  +UpdateSimulation():void
 }
+}
+
+SimulationFactory ..> SimulationComponent: createComponent()
 SimulationComponent <|-- ParticleField
 SimulationComponent <|-- GravitationalInteraction
 SimulationComponent <|-- BoundaryCondition
+SimulationComponent <|-- Particle
+Particle --* Coorddinate
 
-ProductionModule ..> SimulationFactory : Creates
-ProductionModule ..> SettingsModule : Uses
-ProductionModule ..> SimulationComponent : Uses
-SettingsView ..> SettingsModule: Uses
-SimulationView ..>ProductionModule:Uses
+
+SimulationControler ..> SettingsModule : Uses
+SimulationControler ..> SimulationComponent : Uses
+
+SettingsView ..> SimulationControler: Uses
+SettingsModule ..> SimulationFactory : configureComponents()
+SimulationView ..>SimulationControler:Uses
 SimulationView-->SettingsView: Associate
 
 @enduml
-```

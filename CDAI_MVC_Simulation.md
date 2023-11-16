@@ -1,0 +1,92 @@
+#Class Diagram example NBodyProblem
+This is an example of how one could generate and build a class diagram for the NBody simulation. 
+The process started with prompting the Ai to generate a class diagram of the  
+UseCase diagram previously created. Then ChatGPT created a rough draft,
+ which was manually changed to correct mistakes that the AI (ChatGPT) had generated and to add some missing
+classes.
+```plantuml
+@startuml SimulationFactory
+!theme spacelab
+
+package simulation{
+class SimulationControler {
+  +runSimulation(components: List<SimulationComponent>) : void
+  +main():void
+}
+
+package simulation.model #CCDDDD{
+
+Abstract SimulationComponent {
+  +configure() : void
+  +initialize() : void
+  +update():SimulationComponent
+  
+}
+
+class ParticleField {
+  +configure() : void
+  +initialize() : void
+  +update() : ParticleField
+}
+
+class GravitationalInteraction {
+  +configure() : void
+  +initialize() : void
+  +update() : GravitationalInteraction
+}
+
+class BoundaryCondition {
+  +configure() : void
+  +initialize() : void
+  +update() : BoundaryCondition
+}
+
+class SimulationFactory {
+  +createComponent(type: String) : SimulationComponent
+}
+
+class SettingsModule {
+  +configureComponents(factory: SimulationFactory) : void
+  +initializeComponents() : void
+}
+class Particle {
+  -mass:number
+  -position:Coorddinate
+}
+Class Coorddinate{
+ ~x:number
+ ~y:number
+}
+}
+
+package simulation.views #FFFFDD {
+class SettingsView {
+  +DisplaySettings(controler: SettingsModule) : void
+  +UpdateSettings() : void
+}
+
+class SimulationView{
+ +DisplaySimulation(component:: List<SimulationComponent>):void
+ +StartSimulation(ProductionModule:runSimulation()):void
+ +UpdateSimulation():void
+}
+}
+
+SimulationFactory ..> SimulationComponent: createComponent()
+SimulationComponent <|-- ParticleField
+SimulationComponent <|-- GravitationalInteraction
+SimulationComponent <|-- BoundaryCondition
+SimulationComponent <|-- Particle
+Particle --* Coorddinate
+
+
+SimulationControler ..> SettingsModule : Uses
+SimulationControler ..> SimulationComponent : Uses
+
+SettingsView ..> SimulationControler: Uses
+SettingsModule ..> SimulationFactory : configureComponents()
+SimulationView ..>SimulationControler:Uses
+SimulationView-->SettingsView: Associate
+
+@enduml
+```
