@@ -1,0 +1,28 @@
+"""Tests all function in src.pf_example.simulation_controller."""
+import unittest
+
+from src.pf_example.simulation_controller import (
+    SimulationTerminalController
+)
+
+
+class TestSimulationTerminalController(unittest.TestCase):
+
+    """Class to test the code in src.pf_example.simulation_controller."""
+
+    def test_are_numbers(self):
+        """#7: Can construct a SimulationTerminalController."""
+        c = SimulationTerminalController()
+        self.assertTrue(1 + 1 == 3)
+
+    """
+    TODO
+    def test_is_zero(self):
+        '''Test 'is_zero'.'''
+        self.assertIsNotNone(is_zero.__doc__)
+        self.assertTrue(is_zero(0))
+        self.assertTrue(is_zero(0.0))
+        self.assertFalse(is_zero(1))
+        self.assertRaises(TypeError, is_zero, {1, 2})
+        self.assertRaises(TypeError, is_zero, "I am a string")
+    """
