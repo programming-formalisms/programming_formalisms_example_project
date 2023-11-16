@@ -8,7 +8,9 @@ Number|Document                                                              |De
 3b    |[DPUA requirements specification](DPUA_requirementspecification.md)   |The requirements specification, the result of `3a`
 4a    |[DPD assisted](DPD_assisted.md)                                       |The exercise to create DPAI. It is part of the course
 4b    |**[DPAI requirements](DPAI_requirements.md)**                         |The requirements specification, the result of `4a`
-5     |[Class diagram, AI assisted](CDAI_Class_design_diagram_Simulation.md) |The class diagram, follows from the use case diagram
+5     |[Class diagram, AI assisted](CDAI_MVC_Simulation.md)                  |The class diagram, assisted by AI, follows from the use case diagram
+6     |[Class diagram, by humans](CDUA_class_diagram_richel_20231116.md)     |The class diagram, created by humans, follows from the use case diagram
+
 
 We use both console application (written by humans) and a GUI application 
 (written by AI). The GUI package is PyGame.
@@ -28,5 +30,10 @@ DPUA        |Design Process UnAssisted
 
 ## Class diagram
 
-![](class_diagram.png)
+### Initial design of the class diagram
 
+![Initial class diagram](class_diagram_richel_20231116.png)
+
+### Current iteration of the class diagram
+
+![Current class diagram](class_diagram.png)
