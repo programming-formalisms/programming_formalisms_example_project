@@ -103,7 +103,13 @@ abstract class SimulationController {
   + SimulationController(parameter_filename)
   + exit()
   - m_simulation
+  - m_simulation_view
 }
+
+note left of SimulationController::m_simulation_view
+  of the compatible derived class
+end note
+
 
 class SimulationTerminalInput {
   + show_n_steps()
