@@ -16,8 +16,8 @@ class Particle
 class Speed
 class Position
 
-SimulationView --* Simulation
-SimulationView --* SimulationController
+SimulationController --* Simulation
+SimulationController --* SimulationView
 
 Simulation --* SimulationParameters
 SimulationParameters --* InteractionParameters
