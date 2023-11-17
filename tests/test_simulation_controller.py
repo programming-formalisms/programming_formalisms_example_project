@@ -2,7 +2,7 @@
 import unittest
 
 from src.pf_example.simulation_controller import (
-    SimulationTerminalController
+    SimulationTerminalController,
 )
 
 
@@ -12,8 +12,8 @@ class TestSimulationTerminalController(unittest.TestCase):
 
     def test_can_create_terminal_controller(self):
         """#7: Can construct a SimulationTerminalController."""
-        c = SimulationTerminalController()
-        self.assertTrue(1 + 1 == 2)
+        SimulationTerminalController()
+        self.assertTrue(1 + 2 == 2 + 1)
 
     """
     TODO

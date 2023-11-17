@@ -4,9 +4,9 @@ Project used in the UPPMAX Programming Formalisms course.
 """
 
 from pf_example.simulation_controller import (
-    SimulationTerminalController
+    SimulationTerminalController,
 )
-  
+
 
 """
 TODO
