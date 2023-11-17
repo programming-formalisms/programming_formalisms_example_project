@@ -8,10 +8,40 @@ The Programming Formalisms example project
 
 N-body simulation, e.g. galaxy sim or predator-prey
 
-## Links
+## Usage
+
+The simulation can be started in two ways:
+
+ * Console application: a text-only version
+ * GUI application: using graphical windows
+
+### Console application
+
+#### From the command line
+
+In the project root, from a terminal, do:
+
+```
+./scripts/run_console.sh
+```
+
+Or, which are the equivalent two steps:
+
+```
+# Install the package from the local code
+python3 -m pip install .
+
+# Run the code
+python3 main.py
+```
+
+## Documentation
 
  * [Design](design/README.md)
  * [Workflow](workflow/README.md)
 
 
+<<<<<<< HEAD
 Useless sentence.
+=======
+>>>>>>> bc3ca6f04ec5c9b5b883518c80f51baa4ecacbdf
