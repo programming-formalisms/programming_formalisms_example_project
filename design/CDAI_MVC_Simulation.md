@@ -57,6 +57,8 @@ class SettingsModule {
 class Particle {
   -mass:number
   -position:Coordinate
+  -speed:vector(number)
+  +update()
 }
 Class Coordinate{
  ~x:number

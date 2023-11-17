@@ -2,7 +2,7 @@
 
 ![](images/programming_formalisms_teacher_team_logo_116x116.png)
 
-The Programming Formalisms example project.
+The Programming Formalisms example project
 
 ## Goal
 
@@ -39,5 +39,4 @@ python3 main.py
 
  * [Design](design/README.md)
  * [Workflow](workflow/README.md)
-
 
