@@ -39,9 +39,3 @@ python3 main.py
 
  * [Design](design/README.md)
  * [Workflow](workflow/README.md)
-
-
-<<<<<<< HEAD
-Useless sentence.
-=======
->>>>>>> bc3ca6f04ec5c9b5b883518c80f51baa4ecacbdf
