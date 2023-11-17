@@ -1,10 +1,10 @@
 #!/bin/bash
 #
-# Run 'main.py'
+# Start a console application, by running 'main.py'
 #
 # Usage:
 #
-#   ./scripts/run_main.sh
+#   ./scripts/run_console.sh
 #
 #
 #
@@ -14,7 +14,7 @@ if [[ "$PWD" =~ scripts$ ]]; then
     echo " "
     echo "Tip: like this"
     echo " "
-    echo "./scripts/run_main.sh"
+    echo "./scripts/run_console.sh"
     exit 42
 fi
 

@@ -10,12 +10,19 @@ N-body simulation, e.g. galaxy sim or predator-prey
 
 ## Usage
 
-### From the command line
+The simulation can be started in two ways:
+
+ * Console application: a text-only version
+ * GUI application: using graphical windows
+
+### Console application
+
+#### From the command line
 
 In the project root, from a terminal, do:
 
 ```
-./scripts/run_main.sh
+./scripts/run_console.sh
 ```
 
 Or, which are the equivalent two steps:
