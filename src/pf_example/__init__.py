@@ -1,1 +1,1 @@
-"""Initialisation of the functions of The Small Project and The Medium Project."""
+"""Initialisation for The Programming Formalisms Example Project."""
