@@ -10,10 +10,10 @@ class TestSimulationTerminalController(unittest.TestCase):
 
     """Class to test the code in src.pf_example.simulation_controller."""
 
-    def test_are_numbers(self):
+    def test_can_create_terminal_controller(self):
         """#7: Can construct a SimulationTerminalController."""
         c = SimulationTerminalController()
-        # self.assertTrue(1 + 1 == 3)
+        self.assertTrue(1 + 1 == 2)
 
     """
     TODO
