@@ -1,5 +1,5 @@
-"""SimulationControllers."""
+"""Position."""
 
-class SimulationTerminalController:
+class Position:
 
-    """SimulationController that uses a terminal."""
+    """Position is a two dimensional coordinat."""
