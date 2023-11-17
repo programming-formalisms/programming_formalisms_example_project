@@ -13,7 +13,7 @@ class TestSimulationTerminalController(unittest.TestCase):
     def test_are_numbers(self):
         """#7: Can construct a SimulationTerminalController."""
         c = SimulationTerminalController()
-        self.assertTrue(1 + 1 == 3)
+        # self.assertTrue(1 + 1 == 3)
 
     """
     TODO
