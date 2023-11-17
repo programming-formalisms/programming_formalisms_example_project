@@ -2,4 +2,4 @@
 
 class SimulationTerminalController:
 
-    """SimulationController that uses a terminal"""
+    """SimulationController that uses a terminal."""
