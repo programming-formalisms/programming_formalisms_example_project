@@ -28,7 +28,7 @@ class SimulationWindowController:
     def cleanup(self):
         """Destroy a SimulationWindowController.
 
-        I tried this destructor to be private, 
+        I tried this destructor to be private,
         yet when I do, the tests never call it
         when measuring Codecov.
         Due to this, I call it manually in a test.
