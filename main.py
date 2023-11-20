@@ -3,6 +3,7 @@
 Project used in the UPPMAX Programming Formalisms course.
 """
 
+import sys
 from pf_example.simulation_controller import (
     SimulationTerminalController,
 )
@@ -21,8 +22,12 @@ from pf_example.testing import (
 """
 
 if __name__ == "__main__":
-    c = SimulationTerminalController()
-    print("Cannor measure speed yet") # noqa: T201 print is used as a stub
+
+    if "--gui" in sys.argv:
+        print("GUI application") # noqa: T201 print is used as a stub
+    else:
+        print("Console application") # noqa: T201 print is used as a stub
+        c = SimulationTerminalController()
 
 
 """
