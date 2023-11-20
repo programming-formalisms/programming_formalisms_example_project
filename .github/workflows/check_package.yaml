@@ -15,3 +15,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: hynek/build-and-inspect-python-package@v1
+
+      - name: Run console application
+        run: ./scripts/run_console.sh
+
+      - name: Run GUI application
+        run: ./scripts/run_gui_application.sh
