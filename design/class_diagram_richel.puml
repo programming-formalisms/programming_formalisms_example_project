@@ -133,10 +133,20 @@ end note
 
 
 class SimulationWindowController {
-  + stop()
-  + start()
-  + exit()
+  + exec()
+  + cleanup()
+  - stop()
+  - start()
+  - exit()
 }
+
+note left of SimulationWindowController::exec
+  show the window until it is closed
+end note
+
+note left of SimulationWindowController::cleanup
+  Destructor
+end note
 
 note left of SimulationWindowController::start
   on key press or mouse click
