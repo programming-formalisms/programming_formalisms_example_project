@@ -27,7 +27,7 @@ if __name__ == "__main__":
     if "--gui" in sys.argv:
         print("GUI application") # noqa: T201 print is used as a stub
         c = SimulationWindowController()
-        c.exec()
+        c.run()
     else:
         print("Console application") # noqa: T201 print is used as a stub
         c = SimulationTerminalController()
