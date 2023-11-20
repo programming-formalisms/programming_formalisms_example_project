@@ -16,4 +16,7 @@ if [[ "$PWD" =~ scripts$ ]]; then
     exit 42
 fi
 
-plantuml -t png -output design/class_diagram_richel.png design/class_diagram_richel.puml
+# Output file is relative to the input file
+# plantuml -t png -output class_diagram_richel.png design/class_diagram_richel.puml
+
+echo "Does not work, use https://planttext.com instead"
