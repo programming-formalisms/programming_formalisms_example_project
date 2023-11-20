@@ -35,6 +35,29 @@ python3 -m pip install .
 python3 main.py
 ```
 
+### GUI application
+
+The GUI application uses [Pygame](https://www.pygame.org),
+as was decided by voting.
+
+#### From the command line
+
+In the project root, from a terminal, do:
+
+```
+./scripts/run_gui_application.sh
+```
+
+Or, which are the equivalent two steps:
+
+```
+# Install the package from the local code
+python3 -m pip install .
+
+# Run the code
+python3 main.py --gui
+```
+
 ## Documentation
 
  * [Design](design/README.md)

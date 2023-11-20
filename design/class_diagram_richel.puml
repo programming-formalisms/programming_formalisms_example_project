@@ -112,10 +112,13 @@ end note
 abstract class SimulationController {
   + SimulationController(parameter_filename)
   + run()
-  + {abstract} exit()
   - m_simulation
   - m_simulation_view
 }
+
+note left of SimulationController::run
+  Run until the application is closed
+end note
 
 note left of SimulationController::m_simulation_view
   of the compatible derived class
@@ -133,10 +136,18 @@ end note
 
 
 class SimulationWindowController {
-  + stop()
-  + start()
-  + exit()
+  + run()
+  + cleanup()
+  - _stop()
+  - _start()
+  - _exit()
 }
+
+note left of SimulationWindowController::cleanup
+  I had to make this public, so it can be triggered manually.
+  This is needed to get 100 percent code coverage, i.e.
+  it will not be called automatically.
+end note
 
 note left of SimulationWindowController::start
   on key press or mouse click
