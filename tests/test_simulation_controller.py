@@ -24,6 +24,9 @@ class TestSimulationWindowController(unittest.TestCase):
         """#8: Can construct a SimulationTerminalController."""
         c = SimulationWindowController()
         c.run()
+        # This is a manual call to the destructor, else it will not
+        # be triggered when Codecov is measured.
+        c.cleanup()
 
 
     """

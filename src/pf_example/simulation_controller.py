@@ -14,7 +14,7 @@ class SimulationWindowController:
         pygame.init()
         self._screen = pygame.display.set_mode((1280, 720))
         self._clock = pygame.time.Clock()
-        atexit.register(self._cleanup)
+        atexit.register(self.cleanup)
 
     def run(self):
         """Show the window until it is closed."""
@@ -25,8 +25,14 @@ class SimulationWindowController:
             self._clock.tick(frames_per_sec)
 
     @atexit.register
-    def _cleanup(self):
-        """Destroy a SimulationWindowController."""
+    def cleanup(self):
+        """Destroy a SimulationWindowController.
+
+        I tried this destructor to be private, 
+        yet when I do, the tests never call it
+        when measuring Codecov.
+        Due to this, I call it manually in a test.
+        """
         pygame.quit()
 
 
