@@ -19,7 +19,7 @@ class SimulationWindowController:
     def run(self):
         """Show the window until it is closed."""
         frames_per_sec = 60
-        for _ in range(0, frames_per_sec): # Run for 1 second
+        for _ in range(frames_per_sec): # Run for 1 second
             self._screen.fill("purple")
             pygame.display.flip()
             self._clock.tick(frames_per_sec)
