@@ -6,6 +6,7 @@ Project used in the UPPMAX Programming Formalisms course.
 import sys
 from pf_example.simulation_controller import (
     SimulationTerminalController,
+    SimulationWindowController,
 )
 
 """
@@ -25,6 +26,7 @@ if __name__ == "__main__":
 
     if "--gui" in sys.argv:
         print("GUI application") # noqa: T201 print is used as a stub
+        c = SimulationWindowController()
     else:
         print("Console application") # noqa: T201 print is used as a stub
         c = SimulationTerminalController()
