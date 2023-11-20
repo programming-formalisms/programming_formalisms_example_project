@@ -30,14 +30,14 @@ DPUA        |Design Process UnAssisted
 
 ## Class diagram
 
-### Initial design of the class diagram
-
-![Initial class diagram](class_diagram_richel_20231116.png)
-
-Or [view the PlantUML](class_diagram_richel_20231116.puml)
-
 ### Current iteration of the class diagram
 
 ![Current class diagram](class_diagram.png)
 
 Or [view the PlantUML](class_diagram_richel.puml)
+
+### Initial design of the class diagram
+
+![Initial class diagram](class_diagram_richel_20231116.png)
+
+Or [view the PlantUML](class_diagram_richel_20231116.puml)
