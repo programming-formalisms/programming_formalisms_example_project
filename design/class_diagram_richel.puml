@@ -137,14 +137,16 @@ end note
 
 class SimulationWindowController {
   + run()
-  - _cleanup()
+  + cleanup()
   - _stop()
   - _start()
   - _exit()
 }
 
 note left of SimulationWindowController::cleanup
-  Destructor
+  I had to make this public, so it can be triggered manually.
+  This is needed to get 100 percent code coverage, i.e.
+  it will not be called automatically.
 end note
 
 note left of SimulationWindowController::start
