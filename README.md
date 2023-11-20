@@ -37,6 +37,9 @@ python3 main.py
 
 ### GUI application
 
+The GUI application uses [Pygame](https://www.pygame.org),
+as was decided by voting.
+
 #### From the command line
 
 In the project root, from a terminal, do:
