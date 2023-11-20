@@ -13,13 +13,12 @@ class TestPosition(unittest.TestCase):
     def test_can_create_position(self):
         """#15: Can construct a Position."""
         Position()
-        self.assertTrue(1 + 2 == 2 + 1)
 
-    def test_origin_created(self):
+    def test_default_constructed_position_is_at_origin(self):
         """#16: A Position can its x and y read."""
         c = Position()
-        self.assertEqual(c.get_x(), 0.0)
-        self.assertEqual(c.get_y(), 0.0)
+        self.assertEqual(c.x, 0.0)
+        self.assertEqual(c.y, 0.0)
     """
     TODO
     def test_is_zero(self):
