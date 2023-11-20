@@ -13,8 +13,8 @@ class SimulationWindowController
 class SimulationParameters
 class Particles
 class Particle
-class Speed
-class Position
+struct Speed
+struct Position
 
 SimulationController --* Simulation
 SimulationController --* SimulationView
@@ -75,6 +75,16 @@ class Particle {
 note left of Particle::move
   as if alone
 end note
+
+struct Speed {
+  + x
+  + y
+}
+
+struct Position {
+  + x
+  + y
+}
 
 
 abstract class SimulationView {
