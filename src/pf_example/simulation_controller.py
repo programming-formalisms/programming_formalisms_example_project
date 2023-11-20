@@ -24,6 +24,7 @@ class SimulationWindowController:
             pygame.display.flip()
             self._clock.tick(frames_per_sec)
 
+    @atexit.register
     def _cleanup(self):
         """Destroy a SimulationWindowController."""
         pygame.quit()
