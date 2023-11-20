@@ -112,10 +112,13 @@ end note
 abstract class SimulationController {
   + SimulationController(parameter_filename)
   + run()
-  + {abstract} exit()
   - m_simulation
   - m_simulation_view
 }
+
+note left of SimulationController::run
+  Run until the application is closed
+end note
 
 note left of SimulationController::m_simulation_view
   of the compatible derived class
@@ -133,16 +136,12 @@ end note
 
 
 class SimulationWindowController {
-  + exec()
-  + cleanup()
-  - stop()
-  - start()
-  - exit()
+  + run()
+  - _cleanup()
+  - _stop()
+  - _start()
+  - _exit()
 }
-
-note left of SimulationWindowController::exec
-  show the window until it is closed
-end note
 
 note left of SimulationWindowController::cleanup
   Destructor
