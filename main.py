@@ -4,6 +4,7 @@ Project used in the UPPMAX Programming Formalisms course.
 """
 
 import sys
+
 from pf_example.simulation_controller import (
     SimulationTerminalController,
     SimulationWindowController,

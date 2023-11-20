@@ -22,7 +22,7 @@ class SimulationWindowController:
         for _ in range(0, frames_per_sec): # Run for 1 second
             self._screen.fill("purple")
             pygame.display.flip()
-            self._clock.tick(frames_per_sec) 
+            self._clock.tick(frames_per_sec)
 
     def _cleanup(self):
         """Destroy a SimulationWindowController."""
