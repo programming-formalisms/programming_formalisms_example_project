@@ -22,4 +22,4 @@ fi
 python3 -m pip install .
 
 # Run the code
-python3 main.py --gui_application
+python3 main.py --gui
