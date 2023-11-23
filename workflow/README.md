@@ -30,3 +30,7 @@ Videos:
 
  * [From design to feature](https://youtu.be/f-rzfZtsPKU)
  * [Splitting up an Issues to smaller Issues](https://youtu.be/mhIBXfxVxIU)
+
+## Social
+
+ * [Pair programming](https://youtu.be/_DDRWjOfPu4?si=I84veWw9c7Mnq83p)
