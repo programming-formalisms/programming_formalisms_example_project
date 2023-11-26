@@ -45,10 +45,15 @@ class TestParticle(unittest.TestCase):
     def test_a_particle_has_a_speed(self):
         """#[number]: a Particle has a Speed."""
         p = Particle()
-        p._speed()
+        p._speed() # noqa(B108, SLF001)
 ```
 
 The test is that it works, not that it does anything useful.
+
+The `# noqa(B108, SLF001)` allows one to temporarily
+do (1) create an unused variabel, and (2) read a private member variable.
+This test can be removed later, when other tests
+supersede this one.
 
 Use [the workflow that fits you best](https://github.com/programming-formalisms/programming_formalisms_example_project/tree/main/workflow#github-workflows), 
 ideally use a topic branch for this issue 
