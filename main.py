@@ -25,17 +25,8 @@ from pf_example.testing import (
 )
 """
 
-if __name__ == "__main__":
-
-    if "--gui" in sys.argv:
-        print("GUI application") # noqa: T201 print is used as a stub
-        c = SimulationWindowController()
-        c.run()
-    else:
-        print("Console application") # noqa: T201 print is used as a stub
-        c = SimulationTerminalController()
-
-
+def do_benchmark():
+    """Benchmark this project."""
 """
 TODO
     speed_measurements = get_speed_measurements(
@@ -51,3 +42,19 @@ TODO
     )
 
 """
+
+if __name__ == "__main__":
+
+    if "--gui" in sys.argv:
+        print("GUI application") # noqa: T201 print is used as a stub
+        c = SimulationWindowController()
+        c.run()
+    elif "--benchmark" in sys.argv:
+        print("Benchmarking application") # noqa: T201 print is used as a stub
+        if __debug__:
+            e = RuntimeError("Do not benchmark in debug mode")
+            raise e
+        do_benchmark()
+    else:
+        print("Console application") # noqa: T201 print is used as a stub
+        c = SimulationTerminalController()
