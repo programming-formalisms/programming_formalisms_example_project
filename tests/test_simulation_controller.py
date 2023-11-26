@@ -2,32 +2,22 @@
 import unittest
 
 from src.pf_example.simulation_controller import (
-    SimulationTerminalController,
-    SimulationWindowController,
+    SimulationController,
 )
 
 
-class TestSimulationTerminalController(unittest.TestCase):
+class TestSimulationController(unittest.TestCase):
 
-    """Class to test the code in src.pf_example.simulation_terminal_controller."""
+    """Class to test the code in src.pf_example.simulation_controller."""
 
-    def test_can_create_terminal_controller(self):
-        """#7: Can construct a SimulationTerminalController."""
-        SimulationTerminalController()
-        self.assertTrue(1 + 2 == 2 + 1)
+    def test_can_create_simulation_controller(self):
+        """#33: Can construct a SimulationController."""
+        SimulationController()
 
-class TestSimulationWindowController(unittest.TestCase):
-
-    """Class to test the code in src.pf_example.simulation_window_controller."""
-
-    def test_can_create_terminal_controller(self):
-        """#8: Can construct a SimulationTerminalController."""
-        c = SimulationWindowController()
-        c.run()
-        # This is a manual call to the destructor, else it will not
-        # be triggered when Codecov is measured.
-        c.cleanup()
-
+    def test_controller_has_a_simulation(self):
+        """#43: a SimulationController has a Simulation."""
+        c = SimulationController()
+        c._simulation # noqa: B018, SLF001
 
     """
     TODO
