@@ -45,7 +45,7 @@ class TestParticle(unittest.TestCase):
     def test_a_particle_has_a_speed(self):
         """#[number]: a Particle has a Speed."""
         p = Particle()
-        p._speed() # noqa: B018, SLF001
+        p._speed # noqa: B018, SLF001
 ```
 
 The test is that it works, not that it does anything useful.

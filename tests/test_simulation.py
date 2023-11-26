@@ -13,3 +13,8 @@ class TestSimulation(unittest.TestCase):
     def test_can_create_params(self):
         """#26: Can construct a Simulation."""
         Simulation()
+
+    def test_a_simulation_has_particles(self):
+        """#41: a Simulation has Particles."""
+        s = Simulation()
+        s._particles # noqa: B018, SLF001
