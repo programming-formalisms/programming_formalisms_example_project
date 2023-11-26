@@ -19,6 +19,10 @@ have a has-a relation. Create it!
 ```python
 # ...
 
+from src.pf_example.speed import (
+    Speed,
+)
+
 class Particle:
    # ...
 
