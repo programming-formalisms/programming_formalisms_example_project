@@ -4,13 +4,8 @@ Project used in the UPPMAX Programming Formalisms course.
 """
 
 import cProfile
-
 import sys
 
-
-from pf_example.simulation import (
-    run_profile_simulation,
-)
 from pf_example.simulation_terminal_controller import (
     SimulationTerminalController,
 )
@@ -32,9 +27,8 @@ from pf_example.testing import (
 
 def do_benchmark():
     """Benchmark this project."""
-
     cProfile.run(
-        "run_profile_simulation()"
+        "run_profile_simulation()",
     )
 """
 TODO
