@@ -15,6 +15,8 @@ The simulation can be started in two ways:
  * Console application: a text-only version
  * GUI application: using graphical windows
 
+Additionally, the simulation can be benchmarked.
+
 ### Console application
 
 #### From the command line
@@ -56,6 +58,26 @@ python3 -m pip install .
 
 # Run the code
 python3 main.py --gui
+```
+
+### Benchmarking
+
+#### From the command line
+
+In the project root, from a terminal, do:
+
+```
+./scripts/run_benchmarks.sh
+```
+
+Or, which are the equivalent two steps:
+
+```
+# Install the package from the local code
+python3 -m pip install .
+
+# Run the code
+python3 -O main.py --benchmark
 ```
 
 ## Documentation
