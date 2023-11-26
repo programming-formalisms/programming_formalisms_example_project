@@ -2,5 +2,5 @@
 
 class BoundaryConditions:
 
-    """The boundary conditions"""
+    """The boundary conditions."""
 
