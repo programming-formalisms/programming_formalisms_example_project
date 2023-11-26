@@ -17,9 +17,9 @@ class TestParticle(unittest.TestCase):
     def test_particle_has_a_position(self):
         """#38: A Particle has a position."""
         p = Particle()
-        p._position # noqa(B108, SLF001)
+        p._position # noqa: B018, SLF001
 
     def test_particle_has_a_speed(self):
         """#39: A Particle has a speed."""
         p = Particle()
-        p._speed # noqa(B108, SLF001)
+        p._speed # noqa: B018, SLF001
