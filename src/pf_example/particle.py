@@ -3,6 +3,9 @@
 from src.pf_example.position import (
     Position,
 )
+from src.pf_example.speed import (
+    Speed,
+)
 
 
 class Particle:
@@ -12,3 +15,4 @@ class Particle:
     def __init__(self):
         """Create a particle."""
         self._position = Position()
+        self._speed = Speed()
