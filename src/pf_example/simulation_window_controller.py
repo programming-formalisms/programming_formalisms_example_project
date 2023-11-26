@@ -4,8 +4,12 @@ import atexit
 
 import pygame
 
+from src.pf_example.simulation_controller import (
+    SimulationController,
+)
 
-class SimulationWindowController:
+
+class SimulationWindowController(SimulationController):
 
     """SimulationController that uses a window."""
 
