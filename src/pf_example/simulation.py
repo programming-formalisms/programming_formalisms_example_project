@@ -18,3 +18,8 @@ class Simulation:
             "filename",
         )
         self._particles = Particles()
+
+
+def run_profile_simulation():
+    """Run a simulation for speed profiling."""
+    Simulation()
