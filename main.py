@@ -5,8 +5,10 @@ Project used in the UPPMAX Programming Formalisms course.
 
 import sys
 
-from pf_example.simulation_controller import (
+from pf_example.simulation_terminal_controller import (
     SimulationTerminalController,
+)
+from pf_example.simulation_window_controller import (
     SimulationWindowController,
 )
 
