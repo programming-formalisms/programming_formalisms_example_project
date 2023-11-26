@@ -18,6 +18,11 @@ have a is-a-type-of relation. Create it!
 ```python
 # ...
 
+from src.pf_example.simulation_controller import (
+    SimulationController,
+)
+
+
 class SimulationTerminalController(SimulationController):
    # ...
 ```
