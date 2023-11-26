@@ -11,6 +11,9 @@ class SimulationTerminalController
 class SimulationWindowController
 
 class SimulationParameters
+class InteractionParameters
+class BoundaryConditions
+
 class Particles
 class Particle
 struct Speed
