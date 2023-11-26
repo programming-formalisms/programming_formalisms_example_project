@@ -1,9 +1,6 @@
 """Tests all function in src.pf_example.position."""
 import unittest
 
-from src.pf_example.interaction_parameters import (
-    InteractionParameters,
-)
 from src.pf_example.simulation_parameters import (
     SimulationParameters,
 )
