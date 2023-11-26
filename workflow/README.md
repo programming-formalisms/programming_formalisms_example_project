@@ -1,5 +1,9 @@
 # Workflow
 
+ * [Create all classes](https://github.com/programming-formalisms/programming_formalisms_example_project/issues/24)
+ * [Create all has-a relations](https://github.com/programming-formalisms/programming_formalisms_example_project/issues/36)
+ * [Create all is-a-type-of relations](https://github.com/programming-formalisms/programming_formalisms_example_project/issues/37)
+
 ## git branching model
 
 ![](git_branches.png)

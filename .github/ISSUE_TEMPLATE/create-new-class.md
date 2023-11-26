@@ -7,41 +7,47 @@ assignees: ''
 
 ---
 
-In the [the class design document](https://github.com/programming-formalisms/programming_formalisms_example_project/blob/main/design/class_diagram_richel.puml), 
-a class is composed ('has-a') of at least one other class.
-Create that relationship!
+In [the class design document](https://github.com/programming-formalisms/programming_formalisms_example_project/blob/main/design/class_diagram_richel.puml), the class in the title
+is mentioned. Create it!
 
 # Procedure
 
- * [ ] Add the smaller class to the bigger class
-   in the implementation, for example:
+ * [ ] Create a file for the class implementation
+   with name `src/pf_example/[class_name].py`,
+   e.g. `src/pf_example/simulation_parameters.py`
+ * [ ] Create a file for the class tests,
+   with name `tests/test-[class_name].py`,
+   e.g. `tests/test-simulation_parameters.py`
+ * [ ] Create a minimal class implementation,
+   for example:
 
 ```python
-# ...
+"""Simulation parameters."""
 
-class Particle:
-   # ...
+class SimulationParameters:
 
-   def __init__(self):
-       self._speed = Speed()
-
-   # ...
+    """SimulationParameters holds the simulation's parameters."""
 ```
 
  * [ ] Create a minimal class test,
    for example:
 
 ```python
-# ...
+"""Tests all function in src.pf_example.simulation_parameters."""
+import unittest
 
-class TestParticle(unittest.TestCase):
+from src.pf_example.simulation_parameters import (
+    SimulationParameters,
+)
 
-    # ...
 
-    def test_a_particle_has_a_speed(self):
-        """#[number]: a Particle has a Speed."""
-        p = Particle()
-        p._speed()
+class TestSimulationParameters(unittest.TestCase):
+
+    """Class to test the code in src.pf_example.simulation_parameters."""
+
+    def test_can_create_params(self):
+        """#14: Can construct a SimulationParameters."""
+        SimulationParameters()
 ```
 
 The test is that it works, not that it does anything useful.
@@ -49,3 +55,4 @@ The test is that it works, not that it does anything useful.
 Use [the workflow that fits you best](https://github.com/programming-formalisms/programming_formalisms_example_project/tree/main/workflow#github-workflows), 
 ideally use a topic branch for this issue 
 and merge to develop using a PR with code review.
+
