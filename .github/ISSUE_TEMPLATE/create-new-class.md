@@ -7,47 +7,41 @@ assignees: ''
 
 ---
 
-In the design document, the class in the title
-is mentioned. Create it!
+In the [the class design document](https://github.com/programming-formalisms/programming_formalisms_example_project/blob/main/design/class_diagram_richel.puml), 
+a class is composed ('has-a') of at least one other class.
+Create that relationship!
 
 # Procedure
 
- * [ ] Create a file for the class implementation
-   with name `src/pf_example/[class_name].py`,
-   e.g. `src/pf_example/simulation_parameters.py`
- * [ ] Create a file for the class tests,
-   with name `tests/test-[class_name].py`,
-   e.g. `tests/test-simulation_parameters.py`
- * [ ] Create a minimal class implementation,
-   for example:
+ * [ ] Add the smaller class to the bigger class
+   in the implementation, for example:
 
 ```python
-"""Simulation parameters."""
+# ...
 
-class SimulationParameters:
+class Particle:
+   # ...
 
-    """SimulationParameters holds the simulation's parameters."""
+   def __init__(self):
+       self._speed = Speed()
+
+   # ...
 ```
 
  * [ ] Create a minimal class test,
    for example:
 
 ```python
-"""Tests all function in src.pf_example.simulation_parameters."""
-import unittest
+# ...
 
-from src.pf_example.simulation_parameters import (
-    SimulationParameters,
-)
+class TestParticle(unittest.TestCase):
 
+    # ...
 
-class TestSimulationParameters(unittest.TestCase):
-
-    """Class to test the code in src.pf_example.simulation_parameters."""
-
-    def test_can_create_params(self):
-        """#14: Can construct a SimulationParameters."""
-        SimulationParameters()
+    def test_a_particle_has_a_speed(self):
+        """#[number]: a Particle has a Speed."""
+        p = Particle()
+        p._speed()
 ```
 
 The test is that it works, not that it does anything useful.
@@ -55,4 +49,3 @@ The test is that it works, not that it does anything useful.
 Use [the workflow that fits you best](https://github.com/programming-formalisms/programming_formalisms_example_project/tree/main/workflow#github-workflows), 
 ideally use a topic branch for this issue 
 and merge to develop using a PR with code review.
-
