@@ -13,3 +13,8 @@ class TestParticles(unittest.TestCase):
     def test_can_create_particles(self):
         """#29: Can construct a Particles."""
         Particles()
+
+    def test_particles_has_a_collection_of_particles(self):
+        """#40: A Particles has a collection of particles."""
+        p = Particles()
+        p._particles # noqa: B018, SLF001
