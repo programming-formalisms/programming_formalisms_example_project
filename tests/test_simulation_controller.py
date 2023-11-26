@@ -19,6 +19,11 @@ class TestSimulationController(unittest.TestCase):
         c = SimulationController()
         c._simulation # noqa: B018, SLF001
 
+    def test_controller_has_a_view(self):
+        """#44: a SimulationController has a View."""
+        c = SimulationController()
+        c._view # noqa: B018, SLF001
+
     """
     TODO
     def test_is_zero(self):
