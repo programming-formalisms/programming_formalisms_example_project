@@ -38,6 +38,122 @@ Or [view the PlantUML](class_diagram_richel.puml)
 
 ### Initial design of the class diagram
 
-![Initial class diagram](class_diagram_richel_20231116.png)
+```
+classDiagram
 
-Or [view the PlantUML](class_diagram_richel_20231116.puml)
+class Simulation
+
+class SimulationView
+class SimulationTerminal
+class SimulationWindow
+
+class SimulationController
+class SimulationTerminalController
+class SimulationWindowController
+
+class SimulationParameters
+class Particles
+class Particle
+class Velocity
+class Position
+
+SimulationController --* Simulation
+SimulationController --* SimulationView
+
+Simulation --* SimulationParameters
+SimulationParameters --* InteractionParameters
+SimulationParameters --* BoundaryConditions
+
+Simulation --* Particles
+Particles --* "SimulationParameters::m_n_particles" Particle
+
+Particle --* Velocity
+Particle --* Position
+
+
+SimulationView <|-- SimulationTerminal
+SimulationView <|-- SimulationWindow
+
+SimulationController <|-- SimulationTerminalController
+SimulationController <|-- SimulationWindowController
+
+class SimulationParameters {
+  + SimulationParameters(parameter_filename)
+  - m_timestep
+  - m_n_particles
+  - m_interaction_parameters
+  - m_boundary_conditions
+}
+
+class Simulation {
+  + go_to_next_state()
+  - m_simulation_parameters
+}
+
+note for Simulation "uses SimulationParameters::m_timestep"
+
+class Particles {
+  + move()
+  + interact(interaction_parameters)
+  + respond_to_boundary_conditions(boundary_conditions)
+}
+
+note for Particles "'move' as if each particle is alone"
+
+class Particle {
+  + move()
+  + respond_to_boundary_conditions(boundary_conditions)
+
+  - m_position
+  - m_velocity
+}
+
+note for Particle "'move' as if alone"
+
+class SimulationView {
+  + show()
+}
+
+class SimulationTerminal {
+  SimulationTerminal(terminal_size)
+  + show()
+}
+
+note for SimulationTerminal "'show' show as ASCII art"
+
+class SimulationWindow {
+  + show()
+  SimulationWindow(window_size)
+}
+
+note for SimulationWindow "'show' show as pixels"
+
+class SimulationController {
+  + SimulationController(parameter_filename)
+  + run()
+  + exit()
+  - m_simulation
+  - m_simulation_view
+}
+
+note for SimulationController "'m_simulation_view' of the compatible derived class"
+
+class SimulationTerminalController {
+  + show_n_steps()
+  + exit()
+}
+
+note for SimulationTerminalController "'show_n_steps' shows n steps, then pauses"
+
+class SimulationWindowController {
+  + stop()
+  + start()
+  + exit()
+}
+
+note for SimulationWindowController "'start' on key press or mouse click"
+
+note for SimulationWindowController "'stop' on key press or mouse click"
+
+note for SimulationWindowController "'exit' on ESC press"
+```
