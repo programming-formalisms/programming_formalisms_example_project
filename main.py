@@ -12,6 +12,9 @@ from pf_example.simulation_terminal_controller import (
 from pf_example.simulation_window_controller import (
     SimulationWindowController,
 )
+from pf_example.simulation import (
+    run_profile_simulation,
+)
 
 """
 TODO
