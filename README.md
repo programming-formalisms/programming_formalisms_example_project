@@ -84,5 +84,3 @@ python3 -O main.py --benchmark
 
  * [Design](design/README.md)
  * [Workflow](workflow/README.md)
-
-something
